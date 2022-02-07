@@ -1,0 +1,246 @@
+/*обнуление */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+/*обнуление*/
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	font-size: 14px;
+	font-weight: 500;
+	color: #252B42;
+	font-family: Montserrat;
+}
+/*-------------------------------------------------------------------------*/
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	 display: flex;
+	flex-direction: column;
+}
+/*-----в дан.случ паддинг - не позвол прилипать лого при адаптиве -----*/
+._container {
+	max-width: 1046px;
+	padding: 0px 15px;
+	margin: 0px auto; 
+	box-sizing: content-box;
+}
+._ibg {
+	position: relative;
+}
+._ibg img {
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	}
+/*margin позволяет контейнеру выстроится по середине, любой блочн блок */
+/*                   шапка                                        */
+/*-----------шапка надвисает на блок(картинку) - поэт. позишн -абсолют -----*/
+/*-------z-индекс:больш,чтобы наверху всегда над картинкой----*/
+.header {
+	position: absolute;
+	width:100%;
+	left: 0;
+	top: 0;
+	z-index: 50;
+}
+.header__container {
+	display: flex;
+	min-height: 104px;
+	align-items: center;
+}
+@media (max-width:479px){
+	.header__container {min-height: 70px;}
+}
+/*--------ссылки не наследуют колор, нужно указ:inherit ----*/
+.header__logo {
+	font-size: 24px;
+	font-weight: 700;
+	color: inherit;
+}
+.header__menu {
+	margin: 0px 0px 0px 133px;
+}
+@media (max-width:992px){
+	.header__menu {margin:0px 0px 0px 80px;}
+}
+@media (max-width:767px){
+	.header__menu {margin:0px 0px 0px 50px;}
+}
+@media (max-width:479px){
+	.header__menu {margin:0px 0px 0px 20px;}
+}
+.menu {
+	padding: 5px 0;
+}
+/*-----выстраиваем в ряд:дисплей флекс----*/
+/*-----wrap - позволяет пунктам ломаться при адаптиве---*/
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.menu__item {
+
+}
+.menu__item:not(:last-child){
+	margin: 0px 21px 0px 0px;
+}
+
+
+.menu__link {
+	color: #737373;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: calc(24/14*100%);
+}
+@media (max-width:767px){
+	.menu__link {font-size: 18px;}
+}
+/*--------main -----------------------*/
+.page {
+	flex: 1 1 auto;
+}
+.page__main {
+}
+.page__main-block{
+
+}
+.block {
+}
+.main-block {
+	position: relative;
+	
+}
+.main-block__container {
+}
+._container {
+}
+.main-block__body {
+	padding: 184px 0px 191px 0px;
+	position: relative;
+	z-index: 2;
+	max-width: 400px;
+}
+@media (max-width:992px){
+	.main-block__body {
+		padding: 120px 0px 191px 0px;
+	}
+}
+
+/*----------обращ ко всем обьектм 1го уровня >*---*/
+.main-block__body > *:not(:last-child){
+margin: 0px 0px 35px 0px;
+}
+.main-block__title {
+font-weight: 800;
+font-size: 58px;
+line-height: 138%;
+letter-spacing: 0.2px;
+}
+@media (max-width:479px){
+	.main-block__title {
+		font-size: 42px;
+	}
+}
+
+.main-block__text {
+	color: #737373;
+font-weight: 500;
+font-size: 20px;
+line-height: 150%;
+letter-spacing: 0.2px;
+}
+
+.main-block__buttons {
+	display: inline-flex;
+	flex-wrap: flex;
+	margin: -10px 0;
+}
+.main-block__button {
+font-weight: 700;
+font-size: 14px;
+line-height: 150%;
+display: flex;
+min-height: 48px;
+justify-content: center;
+align-items: center;
+text-align: center;
+letter-spacing: 0.2px;
+border-radius: 37px;
+padding: 0px 36px;
+margin: 10px 0;
+}
+@media (max-width:479px) {
+	.main-block__button {
+		display: block;
+	}
+}
+@media (min-width:479px) {
+.main-block__button:not(:last-child){
+	margin-right: 10px;
+}
+}
+.main-block__button_orange {
+	color: #FFFFFF;
+	background: #FF7B47;
+}
+.main-block__button_border {
+	border: 1px solid #0D5C63;
+	box-sizing: border-box;
+	color: #0D5C63;
+
+
+}
+.main-block__image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+@media (max-width:1300px) {
+.main-block__image  img {
+	object-position: right;
+}
+}
+@media (max-width:992px) {
+	.main-block__image{
+		opacity: 0.5;
+	}
+
+}
+/*--------подвал -----------------------*/
+.footer {
+}
