@@ -445,6 +445,101 @@ line-height: 150%;
 letter-spacing: 0.1px;
 
 }
+/*--------------------------------------------------------------*/
+.page__practice {
+}
+.practice {
+	padding: 125px 0px 80px 0px;
+}
+@media(max-width:993px){
+	.practice{
+		padding: 40px 0px 80px 0px;
+	}
+}
+@media(max-width:767px){
+	.practice{
+		padding: 40px 0px 40px 0px;
+	}
+}
+
+.practice__container {
+}
+
+.practice__header {
+	margin:0px 0px 45px 0px;
+}
+
+@media (max-width:767px){
+	.practice__header {
+	margin:0px 0px 25px 0px;
+}
+}
+
+
+.practice__body {
+	margin: 0px -20px -30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.practice__column {
+	padding:0px 20px;
+	margin: 0px 0px 30px 0px;
+	flex: 0 1 25%;
+}
+@media(max-width:1040px){
+	.practice__column {
+		flex: 0 1 50%;
+	}
+}
+@media(max-width:630px){
+	.practice__column {
+		flex: 0 1 100%;
+	}
+}
+
+
+.practice__item {
+}
+
+.item-practice {
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.item-practice__content{
+padding: 30px;
+flex: 1 1 auto;
+}
+
+.practice__link {
+	font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.1px;
+color: inherit;
+font-weight: 700;
+display: inline-block;
+
+}
+.practice__link:not(:last-child){
+	margin: 0px 0px 15px 0px;
+}
+.practice__link:hover{
+	text-decoration: underline;
+
+}
+.item-practice__text {
+font-weight: 500;
+font-size: 14px;
+line-height: 143%;
+letter-spacing: 0.2px;
+color: #737373;
+
+}
+.item-practice__image {
+	display: block;
+	padding: 0px 0px 60% 0px;
+}
 /*--------подвал -----------------------*/
 .footer {
 }
